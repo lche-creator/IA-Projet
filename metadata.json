@@ -1,0 +1,6 @@
+{
+  "name": "Arbitrage",
+  "description": "Une application d'aide à la décision intelligente utilisant l'IA pour analyser les pours et les contres, créer des tableaux comparatifs et réaliser des analyses SWOT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-primary: #0f172a; /* Neutral 900 */
+  --color-brand-secondary: #334155; /* Neutral 700 */
+  --color-brand-accent: #3b82f6; /* Blue 500 */
+  --color-brand-bg: #f8fafc; /* Slate 50 */
+  --color-brand-border: #e2e8f0; /* Slate 200 */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-bg text-brand-primary antialiased;
+  }
+}
+
+.dense-card {
+  @apply bg-white rounded-lg shadow-sm border border-brand-border;
+}
+
+.dense-header {
+  @apply p-3 bg-slate-50 border-b border-brand-border text-xs font-bold uppercase text-slate-600 tracking-wider;
+}
+
+.status-label {
+  @apply text-[10px] text-slate-400 uppercase tracking-widest font-bold;
+}
+
+.status-value {
+  @apply text-sm font-mono uppercase;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400 transition-colors;
+}
